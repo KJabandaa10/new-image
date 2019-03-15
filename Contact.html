@@ -1,0 +1,47 @@
+<!DOCTYPE html> <!-- comments are tasks outstanding-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>New Image Warsop</title>
+        <meta name="description" content="New Image Warsop, Nottinghamshire. Located on the Warsop High Street, we offer professional and friendly service for all your hair-related needs.">        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="leaflet.css">
+    </head>
+    <body>
+        <header>
+            <a href="home.html"><img class="logo" src="img/New Image Logo Tan.jpg" alt="New Image Logo"/></a> <!-- Link to home.html -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+                <ul class="navlist">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
+        <div class="text">
+            <h1>Don't be a stranger</h1>
+            <div class="number">
+                <p><strong>Contact us on </strong><br>01623 842627</p>
+            </div>
+            <h3>We are here, why not try us?</h3>
+        </div>
+        <div id="mapid"></div>
+        <h5>&copy New Image</h5>
+        <script src="leaflet.js"></script>
+        <script>
+                var map = L.map('mapid').setView([53.203720, -1.154710], 17);
+
+                 var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', { attribution: '&copy; <a href="http://www.openstreetmap.org/copyright"> OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                  }).addTo(map);
+
+                 L.marker([53.203720, -1.154710]).addTo(map)
+    .bindPopup('New Image Salon')
+    .openPopup();
+            </script>
+    </body>
+</html>
