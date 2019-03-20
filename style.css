@@ -128,6 +128,10 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
+header {
+  z-index: 999;
+}
+
 /* Intro */
 @media (max-width: 500px) {
   .intro {
@@ -139,7 +143,7 @@ nav a:hover {
   margin: 0;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.171), rgba(0, 0, 0, 0.212)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.267), rgba(0, 0, 0, 0.397)),
     url(img/IMG_0752.JPG);
   background-position: 50% 30%;
   background-repeat: no-repeat;
@@ -458,9 +462,13 @@ h5 {
 
 /* Map */
 #mapid {
-  width: 340px;
-  height: 450px;
+  width: 300px;
+  height: 400px;
   margin: auto;
+}
+
+script {
+  z-index: 1;
 }
 
 /* Contact - Tablets */
